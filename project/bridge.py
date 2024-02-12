@@ -1,9 +1,12 @@
 import json
+import pathlib
 
 
 def load_operation(filename):
     """функция открывает json файл для чтения"""
-    with open('bank_operation.json', 'r', encoding='utf8') as f:
+    BASE_DIR = pathlib.Path(__file__).parent.parent
+    filename = BASE_DIR / 'data/bank_operation.json'
+    with open(filename, 'r', encoding='utf8') as f:
         information = json.load(f)
         return information
 
@@ -44,7 +47,6 @@ def formatter_from(number_from):
     result = len(number_from) - 1
     name_card = ' '.join(number_from[:result])
     return f'{name_card} {number_from[-1][0:4]} {number_from[-1][4:6]}** **** {number_from[-1][12:16]}'
-
 
 
 def formatter_to(number_to):

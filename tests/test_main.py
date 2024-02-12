@@ -1,5 +1,5 @@
 from project.main import operation
-filename = 'bank_operation.json'
+import pathlib
 
 
 def test_operation():
