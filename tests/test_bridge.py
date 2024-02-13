@@ -1,11 +1,14 @@
 from project.bridge import load_operation, sort_operation, filter_operations, formatter_date, formatter_from, formatter_to
 import json
+import pathlib
+BASE_DIR = pathlib.Path(__file__).parent.parent
+filename = BASE_DIR / 'data/bank_operation.json'
 
 
 def test_load_operation():
-    with open('bank_operation.json', 'r', encoding='utf8') as f:
+    with open(filename, 'r', encoding='utf8') as f:
         test = json.load(f)
-    result = load_operation('bank_operation.json')
+    result = load_operation(filename)
     assert result == test
 
 
