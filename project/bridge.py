@@ -4,8 +4,6 @@ import pathlib
 
 def load_operation(filename):
     """функция открывает json файл для чтения"""
-    BASE_DIR = pathlib.Path(__file__).parent.parent
-    filename = BASE_DIR / 'data/bank_operation.json'
     with open(filename, 'r', encoding='utf8') as f:
         information = json.load(f)
         return information

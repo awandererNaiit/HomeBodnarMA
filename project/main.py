@@ -2,9 +2,6 @@ from project.bridge import load_operation, sort_operation, filter_operations, fo
 import pathlib
 BASE_DIR = pathlib.Path(__file__).parent.parent
 filename = BASE_DIR / 'data/bank_operation.json'
-
-
-filename = 'bank_operation.json'
 bank_operations = load_operation(filename)
 sorted_operations = sort_operation(bank_operations)
 filtered_operations = filter_operations(sorted_operations)
