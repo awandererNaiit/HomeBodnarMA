@@ -1,5 +1,6 @@
 from project.bridge import load_operation, sort_operation, filter_operations, formatter_date, formatter_from, formatter_to
 import json
+
 import pathlib
 
 BASE_DIR = pathlib.Path(__file__).parent.parent
