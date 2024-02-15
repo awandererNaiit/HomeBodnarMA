@@ -24,7 +24,7 @@ def filter_operations(operations):
     desired_state = 'EXECUTED'
     filtered_operations = []
     for operation in operations:
-        if operation.get('state') == desired_state and operation.get('from') is not None:
+        if operation.get('state') == desired_state:
             filtered_operations.append(operation)
     return filtered_operations
 
@@ -38,6 +38,10 @@ def formatter_date(date):
 
 def formatter_from(number_from):
     """Скрываем данные пользователя и проверяем откуда была сделана операция"""
+
+    if number_from is None:
+        return 'Пополнение вклада' #или если хотим оставить значение пустым ''
+
     if len(number_from) == 25:
         number_from = number_from.split()
         name_card = ' '.join(number_from[:1])
