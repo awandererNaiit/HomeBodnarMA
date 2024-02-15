@@ -38,6 +38,7 @@ def formatter_date(date):
 
 def formatter_from(number_from):
     """Скрываем данные пользователя и проверяем откуда была сделана операция"""
+
     if number_from is None:
         return 'Пополнение вклада' #или если хотим оставить значение пустым ''
 
