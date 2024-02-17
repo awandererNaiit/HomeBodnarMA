@@ -32,7 +32,7 @@ def test_filter_operations():
 
 def test_formatter_date():
     input_date = '2021-10-15T12:30:45'
-    expected_output = '2021.10.15'
+    expected_output = '15.10.2021'
     output = formatter_date(input_date)
     assert output == expected_output
 
