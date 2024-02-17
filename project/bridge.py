@@ -30,7 +30,7 @@ def filter_operations(operations):
 def formatter_date(date):
     """Переписываем дату в нужный формат"""
     date = date.split('T')[0].split('-')
-    formatted_date = '.'.join(date)
+    formatted_date = '.'.join(date[::-1])
     return formatted_date
 
 
